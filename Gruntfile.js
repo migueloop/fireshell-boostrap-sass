@@ -55,8 +55,9 @@ module.exports = function (grunt) {
     bower: {
       install: {
         options: {
-          copy: false,
-          layout: 'byType',
+          copy: 'false',
+          targetDir: '<%= project.src %>/components',
+          layout: 'byComponent',
           install: true,
           verbose: true,
           cleanTargetDir: false,
@@ -158,7 +159,7 @@ module.exports = function (grunt) {
         options: {
           style: 'expanded',
           banner: '<%= tag.banner %>',
-          loadPath: 'bower_components/bootstrap-sass/assets/stylesheets'
+          loadPath: '<%= project.src %>/components/bootstrap-sass/assets/stylesheets'
         },
         files: {
           '<%= project.assets %>/css/style.min.css': '<%= project.css %>'
