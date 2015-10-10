@@ -11,7 +11,8 @@ FireShell utilises open source components running on the Terminal/command-line f
 6. From now on, just double-click the `grunt-dev.command` file to automatically run FireShell's Grunt tasks, it's setup using the following script to automatically `cd` you into the correct directory and run the necessary commands:
 
 ````sh
-cd "$(dirname "$0")"
+path=`dirname $0`
+cd $path
 if [ ! -d node_modules ];then
     sudo npm install
 fi
@@ -119,9 +120,6 @@ Add new tasks to either the default `grunt` task or `grunt build` task at the en
  */
 grunt.registerTask('default', [
   'sass:dev',
-  'cssmin:dev',
-  'bower:dev',
-  'autoprefixer:dev',
   'jshint',
   'concat:dev',
   'connect:livereload',
@@ -195,7 +193,3 @@ Ignores minified and generated files, this is best for working in teams to avoid
 
 ### .travis.yml
 This is used on [travis-ci.org](http://travis-ci.org) for continuous integration tests, which monitor the FireShell build.
-
-## Platform support
-
-FireShell runs on both Mac OS X, Linux and Windows. Automated command-line scripts are only supported on Mac OS X and Windows.

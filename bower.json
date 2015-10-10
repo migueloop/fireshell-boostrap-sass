@@ -1,9 +1,19 @@
 {
-  "name": "fireshell",
-  "version": "1.0.0",
+  "name": "fireshell-bootstrap-sass",
+  "version": "0.0.0",
+  "authors": [
+    "Miguel Ruiz <myguelruiz@gmail.com>"
+  ],
+  "description": "Fireshell with bootstrap (Sass)",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "modernizr": "~2.6.2",
-    "jquery": "~1.10.2",
-    "normalize-css": "~2.1.3"
+    "bootstrap-sass": "~3.3.5"
   }
 }
